@@ -1,11 +1,6 @@
 <?php
 $title = "My first php code";
-$h1 = "Task 6";
-$menu = [
-	"home" => ["about us", "team", "career"], 
-	"archive" => ["history", "posts", "old"],
-	"contact" => ["send an email", "call us", "social"]
-	];
+$h1 = "Content h1";
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -21,24 +16,9 @@ $menu = [
 		<h1><?php echo $h1;?></h1>
 		
 		<ul id="menu">
-			<!-- <li><a href="#">home</a></li>
+			<li><a href="#">home</a></li>
 			<li><a href="#">archive</a></li>
-			<li><a href="#">contact</a></li> -->
-			<?php
-				foreach($menu as $mainLinks => $innerLinks):?>
-				<li><a href="#"><?= $mainLinks?></a>
-					<ul> 
-						<?php
-						foreach($innerLinks as $value):?>
-						<li><a href="#"><?= $value?></a></li>
-						<?php
-						endforeach;
-						?>
-					</ul>
-				</li>
-			<?php
-			endforeach;
-			?>
+			<li><a href="#">contact</a></li>
 		</ul>
 	
 		<div class="post">
